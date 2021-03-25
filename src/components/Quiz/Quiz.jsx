@@ -52,6 +52,17 @@ const Quiz = () => {
         <>
             <Header title="Country quiz" imageSrc={ImageSrc} />
             <Layout>
+                {quiz === 'flag' && (
+                    <img
+                        style={{
+                            width: '84px',
+                            height: '54px',
+                            marginBottom: '28px',
+                        }}
+                        src={country.flag}
+                        alt="flag question"
+                    />
+                )}
                 <H2>
                     {quiz === 'capital'
                         ? `${country && country.capital} is the capital of`

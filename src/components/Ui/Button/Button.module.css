@@ -43,3 +43,7 @@
     background: var(--color-light);
     color: var(--color-info);
 }
+
+.fullsize {
+    width: 100%;
+}
