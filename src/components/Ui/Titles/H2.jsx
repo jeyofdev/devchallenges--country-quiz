@@ -2,17 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Titles.css';
 
-const H1 = ({ classname, children }) => {
-    return <h1 className={`title_h1 ${classname}`}>{children}</h1>;
+const H2 = ({ classname, children }) => {
+    return <h2 className={`title_h2 ${classname}`}>{children}</h2>;
 };
 
-H1.defaultProps = {
+H2.defaultProps = {
     classname: '',
 };
 
-H1.propTypes = {
+H2.propTypes = {
     classname: PropTypes.string,
     children: PropTypes.string.isRequired,
 };
 
-export default H1;
+export default H2;

@@ -6,7 +6,7 @@ import classes from './Header.module.css';
 const Header = ({ imageSrc, title }) => {
     return (
         <div className={classes.content_header}>
-            <H1 classname="title_h1">{title}</H1>
+            <H1>{title}</H1>
             {imageSrc && <img src={imageSrc} alt="header deco" />}
         </div>
     );

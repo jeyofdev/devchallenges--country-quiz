@@ -13,6 +13,7 @@ const Home = () => {
             <Header title="Country quiz" imageSrc={ImageSrc} />
             <Layout>
                 <Button
+                    link="quiz"
                     type="default"
                     containerClassname="home"
                     fullSize
@@ -22,6 +23,7 @@ const Home = () => {
                     Capital
                 </Button>
                 <Button
+                    link="quiz"
                     type="default"
                     containerClassname="home"
                     fullSize

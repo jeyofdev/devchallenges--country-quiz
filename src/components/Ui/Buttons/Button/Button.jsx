@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import classes from './Button.module.css';
 
 const Button = ({
+    link,
     type,
     containerClassname,
     fullSize,
@@ -11,7 +13,10 @@ const Button = ({
     handleClick,
 }) => {
     return (
-        <div className={`${classes.btn_group} ${classes[containerClassname]}`}>
+        <Link
+            to={`/${link}`}
+            className={`${classes.btn_group} ${classes[containerClassname]}`}
+        >
             <button
                 type="button"
                 name={quiz}
@@ -22,7 +27,7 @@ const Button = ({
             >
                 {children}
             </button>
-        </div>
+        </Link>
     );
 };
 
@@ -33,6 +38,7 @@ Button.defaultProps = {
 };
 
 Button.propTypes = {
+    link: PropTypes.string.isRequired,
     type: PropTypes.string,
     containerClassname: PropTypes.string.isRequired,
     fullSize: PropTypes.bool,
