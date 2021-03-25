@@ -11,6 +11,10 @@
     margin-bottom: 2rem;
 }
 
+.content_block > *:last-child {
+    margin-bottom: 0;
+}
+
 @media (max-width: 500px) {
     .content_block {
         padding-top: calc(68px + 70px);

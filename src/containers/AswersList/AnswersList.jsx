@@ -4,13 +4,9 @@ import Answer from '../../components/Answer/Answer';
 import { QuizContext } from '../../contexts/QuizContext';
 
 const AnswersList = ({ answers }) => {
-    const {
-        goodAnswerId,
-        userChoiceId,
-        updateUserChoiceId,
-        userHasChoice,
-        updateUserHasChoice,
-    } = useContext(QuizContext);
+    const { goodAnswerId, userChoiceId, updateUserChoiceId } = useContext(
+        QuizContext
+    );
 
     const letter = (index) => {
         let output = '';
@@ -38,7 +34,7 @@ const AnswersList = ({ answers }) => {
     const setAnswerType = (answerId) => {
         let type = '';
 
-        if (userHasChoice) {
+        if (userChoiceId !== null) {
             if (goodAnswerId === answerId) {
                 type = 'success';
             } else if (goodAnswerId !== answerId && answerId === userChoiceId) {
@@ -53,11 +49,6 @@ const AnswersList = ({ answers }) => {
         return type;
     };
 
-    const handleClick = (answerId) => {
-        updateUserHasChoice(true);
-        updateUserChoiceId(answerId);
-    };
-
     return (
         <>
             {answers.map((answer, index) => (
@@ -65,8 +56,8 @@ const AnswersList = ({ answers }) => {
                     key={answer.id}
                     type={setAnswerType(answer.id)}
                     index={letter(index)}
-                    disabled={userHasChoice}
-                    handleClick={() => handleClick(answer.id)}
+                    disabled={userChoiceId !== null}
+                    handleClick={() => updateUserChoiceId(answer.id)}
                 >
                     {answer.name}
                 </Answer>

@@ -12,7 +12,14 @@ const QuizContextProvider = ({ children }) => {
     const [answers, setAnswers] = useState([]);
     const [goodAnswerId, setGoodAnswerId] = useState(null);
     const [userChoiceId, setUserChoiceId] = useState(null);
-    const [userHasChoice, setUserHasChoice] = useState(false);
+    const [steps, setSteps] = useState({
+        step1: true,
+        step2: false,
+        step3: false,
+        step4: false,
+        step5: false,
+        step6: false,
+    });
 
     const updateQuiz = (value) => {
         setQuiz(value);
@@ -66,8 +73,8 @@ const QuizContextProvider = ({ children }) => {
         setUserChoiceId(answerId);
     };
 
-    const updateUserHasChoice = () => {
-        setUserHasChoice(!userHasChoice);
+    const updateSteps = (currentStep, nextStep) => {
+        setSteps({ ...steps, [currentStep]: false, [nextStep]: true });
     };
 
     return (
@@ -84,8 +91,8 @@ const QuizContextProvider = ({ children }) => {
                 goodAnswerId,
                 userChoiceId,
                 updateUserChoiceId,
-                userHasChoice,
-                updateUserHasChoice,
+                steps,
+                updateSteps,
             }}
         >
             {children}

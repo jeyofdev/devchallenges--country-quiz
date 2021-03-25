@@ -18,7 +18,7 @@ const Home = () => {
                     containerClassname="home"
                     fullSize
                     quiz="capital"
-                    handleClick={updateQuiz}
+                    handleClick={() => updateQuiz('capital')}
                 >
                     Capital
                 </Button>
@@ -28,7 +28,7 @@ const Home = () => {
                     containerClassname="home"
                     fullSize
                     quiz="flag"
-                    handleClick={updateQuiz}
+                    handleClick={() => updateQuiz('flag')}
                 >
                     Flag
                 </Button>

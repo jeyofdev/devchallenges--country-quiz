@@ -23,7 +23,7 @@ const Button = ({
                 className={`${classes.btn} ${classes[type]} ${
                     fullSize ? classes.fullsize : ''
                 }`}
-                onClick={() => handleClick(quiz)}
+                onClick={handleClick}
             >
                 {children}
             </button>
@@ -34,7 +34,7 @@ const Button = ({
 Button.defaultProps = {
     type: 'default',
     quiz: '',
-    fullSize: 'false',
+    fullSize: false,
 };
 
 Button.propTypes = {
