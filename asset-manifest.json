@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/devchallenges--country-quiz/static/css/main.812280c2.chunk.css",
+    "main.js": "/devchallenges--country-quiz/static/js/main.eb039423.chunk.js",
+    "main.js.map": "/devchallenges--country-quiz/static/js/main.eb039423.chunk.js.map",
+    "runtime-main.js": "/devchallenges--country-quiz/static/js/runtime-main.f7fe0598.js",
+    "runtime-main.js.map": "/devchallenges--country-quiz/static/js/runtime-main.f7fe0598.js.map",
+    "static/js/2.58857b1a.chunk.js": "/devchallenges--country-quiz/static/js/2.58857b1a.chunk.js",
+    "static/js/2.58857b1a.chunk.js.map": "/devchallenges--country-quiz/static/js/2.58857b1a.chunk.js.map",
+    "index.html": "/devchallenges--country-quiz/index.html",
+    "static/css/main.812280c2.chunk.css.map": "/devchallenges--country-quiz/static/css/main.812280c2.chunk.css.map",
+    "static/js/2.58857b1a.chunk.js.LICENSE.txt": "/devchallenges--country-quiz/static/js/2.58857b1a.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/devchallenges--country-quiz/static/media/background.41dbc550.png",
+    "static/media/header.182b6171.svg": "/devchallenges--country-quiz/static/media/header.182b6171.svg",
+    "static/media/result.d76bfdf8.svg": "/devchallenges--country-quiz/static/media/result.d76bfdf8.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f7fe0598.js",
+    "static/js/2.58857b1a.chunk.js",
+    "static/css/main.812280c2.chunk.css",
+    "static/js/main.eb039423.chunk.js"
+  ]
+}
