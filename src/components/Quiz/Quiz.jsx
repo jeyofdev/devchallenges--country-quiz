@@ -7,7 +7,7 @@ import AnswersList from '../../containers/AswersList/AnswersList';
 import ImageSrc from '../../assets/images/header.svg';
 
 const Quiz = () => {
-    const { quiz, answers } = useContext(QuizContext);
+    const { quiz, country, answers } = useContext(QuizContext);
 
     return (
         <>
@@ -15,7 +15,7 @@ const Quiz = () => {
             <Layout>
                 <H2>
                     {quiz === 'capital'
-                        ? 'Paris is the capital of'
+                        ? `${country && country.capital} is the capital of`
                         : 'Which country does this flag belong to ?'}
                 </H2>
                 <AnswersList answers={answers} />

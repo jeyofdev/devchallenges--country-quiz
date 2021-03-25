@@ -10,6 +10,9 @@ const QuizContextProvider = ({ children }) => {
     const [countries, setCountries] = useState([]);
     const [country, setCountry] = useState(null);
     const [answers, setAnswers] = useState([]);
+    const [goodAnswerId, setGoodAnswerId] = useState(null);
+    const [userChoiceId, setUserChoiceId] = useState(null);
+    const [userHasChoice, setUserHasChoice] = useState(false);
 
     const updateQuiz = (value) => {
         setQuiz(value);
@@ -56,6 +59,15 @@ const QuizContextProvider = ({ children }) => {
         const responses = [country, ...otherResponses];
 
         setAnswers(randomize(responses));
+        setGoodAnswerId(country.id);
+    };
+
+    const updateUserChoiceId = (answerId) => {
+        setUserChoiceId(answerId);
+    };
+
+    const updateUserHasChoice = () => {
+        setUserHasChoice(!userHasChoice);
     };
 
     return (
@@ -69,6 +81,11 @@ const QuizContextProvider = ({ children }) => {
                 updateCountry,
                 answers,
                 updateAnswers,
+                goodAnswerId,
+                userChoiceId,
+                updateUserChoiceId,
+                userHasChoice,
+                updateUserHasChoice,
             }}
         >
             {children}

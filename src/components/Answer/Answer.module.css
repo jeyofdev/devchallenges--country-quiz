@@ -17,9 +17,34 @@
     border: 2px solid var(--border-color-answer-default);
 }
 
+.answer.success {
+    background: var(--color-success);
+}
+
+.answer.danger {
+    background: var(--color-danger);
+}
+
 .answer:hover {
     background: var(--color-info);
     border-color: var(--color-info);
+}
+
+.answer:disabled:hover {
+    cursor: initial;
+}
+
+.answer.default:disabled:hover {
+    background: var(--color-light);
+    border-color: var(--border-color-answer-default);
+}
+
+.answer.success:disabled:hover {
+    background: var(--color-success);
+}
+
+.answer.danger:disabled:hover {
+    background: var(--color-danger);
 }
 
 /* ====================
@@ -30,8 +55,13 @@
     align-items: center;
 }
 
-.answer span {
+.answer span,
+.answer .icon {
     color: var(--color-light);
+}
+
+.answer .icon {
+    font-size: 1.25rem;
 }
 
 .answer:hover span {
@@ -44,6 +74,10 @@
 
 .answer.default:hover span {
     color: var(--color-light);
+}
+
+.answer.default:disabled:hover span {
+    color: var(--color-answer);
 }
 
 .answer span:first-child {
