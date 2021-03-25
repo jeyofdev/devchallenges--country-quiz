@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@400;600;700&display=swap');
+
+/* ====================
+    VARIABLES
+==================== */
+:root {
+    --gutter: 15px;
+    --color-bg: #5256a1;
+}
+
+/* ====================
+    CONTAINER
+==================== */
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-bg) url(../../assets/images/background.png)
+        no-repeat 50% / cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding-top: 1rem;
+    padding-bottom: calc(35.455px + 1rem);
+}
+
+.App > .container {
+    position: relative;
+    width: 100%;
+    max-width: 464px;
+    padding-right: var(--gutter);
+    padding-left: var(--gutter);
+    margin: 0 auto;
+    margin-bottom: calc(2.5rem + 0.9rem);
+    text-align: center;
+}
