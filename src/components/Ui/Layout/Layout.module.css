@@ -1,0 +1,18 @@
+.content_block {
+    background: var(--color-light);
+    text-align: center;
+    border-radius: 24px;
+    padding: 68px 32px;
+    padding-bottom: 32px;
+    margin-top: 10px;
+}
+
+.content_block > * {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 500px) {
+    .content_block {
+        padding-top: calc(68px + 70px);
+    }
+}
