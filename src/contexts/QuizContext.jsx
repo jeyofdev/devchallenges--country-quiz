@@ -20,6 +20,7 @@ const QuizContextProvider = ({ children }) => {
         step5: false,
         step6: false,
     });
+    const [showResult, setShowResult] = useState(false);
 
     const updateQuiz = (value) => {
         setQuiz(value);
@@ -41,17 +42,11 @@ const QuizContextProvider = ({ children }) => {
             );
     };
 
-    const updateCountry = (reset = false) => {
-        if (!reset) {
-            const countriesLength = countries.length;
-            const randomIndex = Math.floor(
-                Math.random() * (countriesLength - 0)
-            );
+    const updateCountry = () => {
+        const countriesLength = countries.length;
+        const randomIndex = Math.floor(Math.random() * (countriesLength - 0));
 
-            setCountry(countries[randomIndex]);
-        } else {
-            setCountry(null);
-        }
+        setCountry(countries[randomIndex]);
     };
 
     const updateAnswers = () => {
@@ -77,6 +72,10 @@ const QuizContextProvider = ({ children }) => {
         setSteps({ ...steps, [currentStep]: false, [nextStep]: true });
     };
 
+    const updateShowResult = () => {
+        setShowResult(!showResult);
+    };
+
     return (
         <QuizContext.Provider
             value={{
@@ -93,6 +92,8 @@ const QuizContextProvider = ({ children }) => {
                 updateUserChoiceId,
                 steps,
                 updateSteps,
+                updateShowResult,
+                showResult,
             }}
         >
             {children}
