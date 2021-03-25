@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import Header from '../Ui/Header/Header';
-import ImageSrc from '../../assets/images/header.svg';
-import Layout from '../Ui/Layout/Layout';
-import Button from '../Ui/Buttons/Button/Button';
 import { QuizContext } from '../../contexts/QuizContext';
+import ImageSrc from '../../assets/images/header.svg';
+import Layout from '../../containers/Layout/Layout';
+import Button from '../Ui/Button/Button';
 
 const Home = () => {
     const { updateQuiz } = useContext(QuizContext);

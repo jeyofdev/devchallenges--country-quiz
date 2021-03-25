@@ -150,14 +150,20 @@ button {
     font-weight: 700;
 }
 
+span {
+    font-family: var(--font-family-primary);
+    font-style: normal;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+}
+
 .fullsize {
     width: 100%;
 }
 
 button {
     cursor: pointer;
-}
-
-a {
-    text-decoration: none;
 }

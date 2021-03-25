@@ -1,0 +1,58 @@
+/* ====================
+    BUTTON
+==================== */
+.answer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 19px;
+    margin-bottom: 30px;
+}
+
+.answer.default {
+    background: var(--color-light);
+    border: 2px solid var(--border-color-answer-default);
+}
+
+.answer:hover {
+    background: var(--color-info);
+    border-color: var(--color-info);
+}
+
+/* ====================
+    BUTTON CONTENT
+==================== */
+.answer_content {
+    display: flex;
+    align-items: center;
+}
+
+.answer span {
+    color: var(--color-light);
+}
+
+.answer:hover span {
+    color: var(--color-light);
+}
+
+.answer.default span {
+    color: var(--color-answer);
+}
+
+.answer.default:hover span {
+    color: var(--color-light);
+}
+
+.answer span:first-child {
+    font-size: 24px;
+    line-height: 36px;
+    margin-right: 45px;
+}
+
+.answer span:last-child {
+    font-size: 18px;
+    line-height: 27px;
+}
