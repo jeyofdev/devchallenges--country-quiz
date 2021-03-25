@@ -1,0 +1,12 @@
+.title_h1 {
+    font-size: 36px;
+    line-height: 54px;
+    text-transform: uppercase;
+    color: var(--color-gray-100);
+}
+
+@media (max-width: 500px) {
+    .title_h1 {
+        text-align: center;
+    }
+}

@@ -1,0 +1,23 @@
+.content_header {
+    position: relative;
+    display: flex;
+}
+
+.content_header > img {
+    position: absolute;
+    right: 0;
+}
+
+@media (max-width: 500px) {
+    .content_header {
+        flex-direction: column;
+    }
+
+    .content_header > img {
+        position: absolute;
+        top: 70px;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
