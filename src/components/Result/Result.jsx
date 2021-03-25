@@ -8,7 +8,11 @@ import classes from './Result.module.css';
 import { QuizContext } from '../../contexts/QuizContext';
 
 const Result = () => {
-    const { correctAnswers } = useContext(QuizContext);
+    const { correctAnswers, updateAllReset } = useContext(QuizContext);
+
+    const handleClick = () => {
+        updateAllReset();
+    };
 
     return (
         <>
@@ -21,7 +25,11 @@ const Result = () => {
                     You got <span>{correctAnswers}</span> correct answers
                 </p>
 
-                <Button type="default" containerClassname="try_again">
+                <Button
+                    type="default"
+                    containerClassname="try_again"
+                    handleClick={handleClick}
+                >
                     Try again
                 </Button>
             </Layout>

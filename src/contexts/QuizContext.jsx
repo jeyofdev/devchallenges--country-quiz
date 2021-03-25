@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import randomize from '../helpers/helpers';
@@ -22,6 +22,7 @@ const QuizContextProvider = ({ children }) => {
         step6: false,
     });
     const [showResult, setShowResult] = useState(false);
+    const [allReset, setAllReset] = useState(false);
 
     const updateQuiz = (value) => {
         setQuiz(value);
@@ -83,6 +84,24 @@ const QuizContextProvider = ({ children }) => {
         setShowResult(!showResult);
     };
 
+    const updateAllReset = () => {
+        setAllReset(!allReset);
+    };
+
+    useEffect(() => {
+        if (allReset) {
+            setQuiz(null);
+            setCountries([]);
+            setCountry(null);
+            setAnswers([]);
+            setGoodAnswerId(null);
+            setCorrectAnswers(0);
+            setUserChoiceId(null);
+            setSteps({ ...steps, step1: true, step6: false });
+            setShowResult(false);
+        }
+    }, [allReset]);
+
     return (
         <QuizContext.Provider
             value={{
@@ -103,6 +122,8 @@ const QuizContextProvider = ({ children }) => {
                 updateSteps,
                 updateShowResult,
                 showResult,
+                allReset,
+                updateAllReset,
             }}
         >
             {children}
