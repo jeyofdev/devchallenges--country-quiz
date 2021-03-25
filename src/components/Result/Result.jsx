@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import Layout from '../../containers/Layout/Layout';
 import Header from '../Ui/Header/Header';
 import imageSrc from '../../assets/images/result.svg';
@@ -8,11 +9,21 @@ import classes from './Result.module.css';
 import { QuizContext } from '../../contexts/QuizContext';
 
 const Result = () => {
-    const { correctAnswers, updateAllReset } = useContext(QuizContext);
+    const history = useHistory();
+    const { correctAnswers, showResult, updateAllReset, reset } = useContext(
+        QuizContext
+    );
 
     const handleClick = () => {
         updateAllReset();
+        reset();
     };
+
+    useEffect(() => {
+        if (!showResult) {
+            history.push('/');
+        }
+    }, [showResult]);
 
     return (
         <>

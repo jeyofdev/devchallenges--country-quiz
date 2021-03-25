@@ -36,6 +36,7 @@ Button.defaultProps = {
     type: 'default',
     quiz: '',
     fullSize: false,
+    handleClick: null,
 };
 
 Button.propTypes = {
@@ -45,7 +46,7 @@ Button.propTypes = {
     fullSize: PropTypes.bool,
     quiz: PropTypes.string,
     children: PropTypes.string.isRequired,
-    handleClick: PropTypes.func.isRequired,
+    handleClick: PropTypes.func,
 };
 
 export default Button;

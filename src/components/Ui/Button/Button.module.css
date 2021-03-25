@@ -2,7 +2,8 @@
     display: flex;
 }
 
-.btn_group.home {
+.btn_group.home,
+.btn_group.404 {
     justify-content: center;
 }
 
@@ -17,7 +18,7 @@
 }
 
 .default {
-    background: transparent;
+    background: var(--color-light);
     border: 2px solid var(--color-content);
     border-radius: 12px;
     font-weight: 600;

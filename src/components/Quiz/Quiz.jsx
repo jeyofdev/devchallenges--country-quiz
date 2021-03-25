@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Redirect, useHistory } from 'react-router-dom';
 import { QuizContext } from '../../contexts/QuizContext';
 import Header from '../Ui/Header/Header';
 import Layout from '../../containers/Layout/Layout';
@@ -46,13 +46,14 @@ const Quiz = () => {
         if (showResult) {
             history.push('/result');
         }
-    });
+    }, [showResult]);
 
     return (
         <>
             <Header title="Country quiz" imageSrc={ImageSrc} />
             <Layout>
-                {quiz === 'flag' && (
+                {quiz === null && <Redirect to="/" />}
+                {country && quiz === 'flag' && (
                     <img
                         style={{
                             width: '84px',

@@ -13,6 +13,10 @@
     text-align: left;
 }
 
+.lg {
+    font-size: 4rem;
+}
+
 @media (max-width: 500px) {
     .title_h1 {
         text-align: center;

@@ -88,17 +88,21 @@ const QuizContextProvider = ({ children }) => {
         setAllReset(!allReset);
     };
 
+    const reset = () => {
+        setQuiz(null);
+        setCountries([]);
+        setCountry(null);
+        setAnswers([]);
+        setGoodAnswerId(null);
+        setCorrectAnswers(0);
+        setUserChoiceId(null);
+        setSteps({ ...steps, step1: true, step6: false });
+        setShowResult(false);
+    };
+
     useEffect(() => {
         if (allReset) {
-            setQuiz(null);
-            setCountries([]);
-            setCountry(null);
-            setAnswers([]);
-            setGoodAnswerId(null);
-            setCorrectAnswers(0);
-            setUserChoiceId(null);
-            setSteps({ ...steps, step1: true, step6: false });
-            setShowResult(false);
+            reset();
         }
     }, [allReset]);
 
@@ -124,6 +128,7 @@ const QuizContextProvider = ({ children }) => {
                 showResult,
                 allReset,
                 updateAllReset,
+                reset,
             }}
         >
             {children}
