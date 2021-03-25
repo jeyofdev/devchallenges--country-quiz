@@ -32,13 +32,14 @@ const Button = ({
 };
 
 Button.defaultProps = {
+    link: '',
     type: 'default',
     quiz: '',
     fullSize: false,
 };
 
 Button.propTypes = {
-    link: PropTypes.string.isRequired,
+    link: PropTypes.string,
     type: PropTypes.string,
     containerClassname: PropTypes.string.isRequired,
     fullSize: PropTypes.bool,

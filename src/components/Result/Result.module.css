@@ -1,0 +1,24 @@
+.content_block {
+    background: var(--color-light);
+    border-radius: 24px;
+    padding: 49px 32px 32px;
+    margin-top: 10px;
+}
+
+.content_text {
+    line-height: 1;
+    color: var(--color-content);
+    margin-bottom: 60px;
+}
+
+.content_text > span {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #9bdda6;
+}
+
+@media (max-width: 500px) {
+    .content_block {
+        padding-top: calc(68px + 70px);
+    }
+}

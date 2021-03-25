@@ -144,6 +144,7 @@ h3,
 h4,
 h5,
 h6,
+p,
 button {
     font-family: var(--font-family-primary);
     font-style: normal;
@@ -153,6 +154,10 @@ button {
 span {
     font-family: var(--font-family-primary);
     font-style: normal;
+    font-weight: 500;
+}
+
+p {
     font-weight: 500;
 }
 

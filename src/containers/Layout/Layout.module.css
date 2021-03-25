@@ -7,6 +7,12 @@
     margin-top: 10px;
 }
 
+.content_block.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .content_block > * {
     margin-bottom: 2rem;
 }

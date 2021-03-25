@@ -11,6 +11,7 @@ const QuizContextProvider = ({ children }) => {
     const [country, setCountry] = useState(null);
     const [answers, setAnswers] = useState([]);
     const [goodAnswerId, setGoodAnswerId] = useState(null);
+    const [correctAnswers, setCorrectAnswers] = useState(0);
     const [userChoiceId, setUserChoiceId] = useState(null);
     const [steps, setSteps] = useState({
         step1: true,
@@ -64,6 +65,12 @@ const QuizContextProvider = ({ children }) => {
         setGoodAnswerId(country.id);
     };
 
+    const updateCorrectAnswers = () => {
+        if (userChoiceId === goodAnswerId) {
+            setCorrectAnswers(correctAnswers + 1);
+        }
+    };
+
     const updateUserChoiceId = (answerId) => {
         setUserChoiceId(answerId);
     };
@@ -87,6 +94,8 @@ const QuizContextProvider = ({ children }) => {
                 updateCountry,
                 answers,
                 updateAnswers,
+                correctAnswers,
+                updateCorrectAnswers,
                 goodAnswerId,
                 userChoiceId,
                 updateUserChoiceId,

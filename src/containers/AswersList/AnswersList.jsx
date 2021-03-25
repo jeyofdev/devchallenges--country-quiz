@@ -1,12 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Answer from '../../components/Answer/Answer';
 import { QuizContext } from '../../contexts/QuizContext';
 
 const AnswersList = ({ answers }) => {
-    const { goodAnswerId, userChoiceId, updateUserChoiceId } = useContext(
-        QuizContext
-    );
+    const {
+        goodAnswerId,
+        updateCorrectAnswers,
+        userChoiceId,
+        updateUserChoiceId,
+    } = useContext(QuizContext);
 
     const letter = (index) => {
         let output = '';
@@ -48,6 +51,12 @@ const AnswersList = ({ answers }) => {
 
         return type;
     };
+
+    useEffect(() => {
+        if (userChoiceId !== null && userChoiceId === goodAnswerId) {
+            updateCorrectAnswers();
+        }
+    }, [userChoiceId]);
 
     return (
         <>

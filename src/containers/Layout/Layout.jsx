@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { QuizContext } from '../../contexts/QuizContext';
 import classes from './Layout.module.css';
 
-const Layout = ({ children }) => {
+const Layout = ({ classname, children }) => {
     const location = useLocation();
 
     const {
@@ -33,10 +33,19 @@ const Layout = ({ children }) => {
         }
     }, [country]);
 
-    return <div className={classes.content_block}>{children}</div>;
+    return (
+        <div className={`${classes.content_block} ${classes[classname]}`}>
+            {children}
+        </div>
+    );
+};
+
+Layout.defaultProps = {
+    classname: '',
 };
 
 Layout.propTypes = {
+    classname: PropTypes.string,
     children: PropTypes.oneOfType([PropTypes.string, PropTypes.array])
         .isRequired,
 };
