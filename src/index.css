@@ -143,8 +143,17 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+button {
     font-family: var(--font-family-primary);
     font-style: normal;
     font-weight: 700;
+}
+
+.fullsize {
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
 }

@@ -6,8 +6,10 @@
 :root {
     --gutter: 15px;
     --color-light: #fff;
-    --color-bg: #5256a1;
     --color-gray-100: #f2f2f2;
+    --color-bg: #5256a1;
+    --color-info: #f9a826;
+    --color-content: #1d355d;
     --font-family-primary: 'Poppins', sans-serif;
 }
 
