@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/devchallenges--country-quiz/static/css/main.4296cbea.chunk.css",
+    "main.css": "/devchallenges--country-quiz/static/css/main.1695f223.chunk.css",
     "main.js": "/devchallenges--country-quiz/static/js/main.789dcf75.chunk.js",
     "main.js.map": "/devchallenges--country-quiz/static/js/main.789dcf75.chunk.js.map",
     "runtime-main.js": "/devchallenges--country-quiz/static/js/runtime-main.f7fe0598.js",
@@ -8,7 +8,7 @@
     "static/js/2.6f182345.chunk.js": "/devchallenges--country-quiz/static/js/2.6f182345.chunk.js",
     "static/js/2.6f182345.chunk.js.map": "/devchallenges--country-quiz/static/js/2.6f182345.chunk.js.map",
     "index.html": "/devchallenges--country-quiz/index.html",
-    "static/css/main.4296cbea.chunk.css.map": "/devchallenges--country-quiz/static/css/main.4296cbea.chunk.css.map",
+    "static/css/main.1695f223.chunk.css.map": "/devchallenges--country-quiz/static/css/main.1695f223.chunk.css.map",
     "static/js/2.6f182345.chunk.js.LICENSE.txt": "/devchallenges--country-quiz/static/js/2.6f182345.chunk.js.LICENSE.txt",
     "static/media/App.css": "/devchallenges--country-quiz/static/media/background.41dbc550.png",
     "static/media/header.182b6171.svg": "/devchallenges--country-quiz/static/media/header.182b6171.svg",
@@ -17,7 +17,7 @@
   "entrypoints": [
     "static/js/runtime-main.f7fe0598.js",
     "static/js/2.6f182345.chunk.js",
-    "static/css/main.4296cbea.chunk.css",
+    "static/css/main.1695f223.chunk.css",
     "static/js/main.789dcf75.chunk.js"
   ]
 }
