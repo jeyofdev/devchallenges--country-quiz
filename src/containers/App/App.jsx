@@ -6,6 +6,7 @@ import Result from '../../components/Result/Result';
 import NotFound from '../../components/Error/NotFound';
 import QuizContextProvider from '../../contexts/QuizContext';
 import './App.css';
+import Footer from '../../components/Ui/Footer/Footer';
 
 const App = () => {
     return (
@@ -21,6 +22,8 @@ const App = () => {
                         </Switch>
                     </Router>
                 </div>
+
+                <Footer />
             </div>
         </QuizContextProvider>
     );
